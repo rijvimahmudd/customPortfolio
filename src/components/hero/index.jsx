@@ -3,6 +3,7 @@ import { Box, Typography, styled } from '@mui/material';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Typewriter from 'typewriter-effect';
+import HireMeButton from '../shared/HireMeButton';
 
 const CustomTypography = styled(Typography)({
 	fontWeight: '800',
@@ -93,6 +94,10 @@ const Hero = () => {
 					></Typewriter>
 				</Box>
 			</CustomTypography>
+			<HireMeButton
+				title={'hire me'}
+				color={theme.palette.fontColor.main}
+			></HireMeButton>
 		</Box>
 	);
 };

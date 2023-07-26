@@ -38,10 +38,11 @@ const NavBar = ({
 					? transparent || theme.palette.primary.main
 					: initialState,
 				p: 1.7,
-				zIndex: zIndex || 3,
+				zIndex: zIndex || 99,
 				overflow: 'hidden',
 				transition: 'background-color 0.5s ease-in, box-shadow 0.5s ease-in',
 				boxShadow: shadow && '0 0 10px 0 rgba(0, 0, 0, 0.1)',
+				// transform: 'translateY(0%)',
 				...rest,
 			}}
 		>

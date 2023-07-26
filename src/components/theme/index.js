@@ -21,6 +21,9 @@ const theme = createTheme({
 		blue: {
 			main: '#3e64ff',
 		},
+		fontColor:{
+			main: '#000000E0'
+		}
 	},
 	typography: {
 		fontFamily: ['poppins'].join(','),

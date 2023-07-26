@@ -23,7 +23,7 @@ function App() {
 
 	useEffect(() => {
 		// Determine when to show the NavBar
-		const specificPoint = 500; // Adjust this value to your desired point
+		const specificPoint = 300; // Adjust this value to your desired point
 		setShowNavBar(y > specificPoint);
 	}, [y]);
 	return (
@@ -43,8 +43,8 @@ function App() {
 				<Hero></Hero>
 				<Container>
 					<About></About>
-					<Education></Education>
-					<Experience></Experience>
+					{/* <Education></Education> */}
+					{/* <Experience></Experience> */}
 					<Skills></Skills>
 					<Certificate></Certificate>
 					<Service></Service>

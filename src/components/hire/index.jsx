@@ -1,5 +1,6 @@
 import { useTheme } from '@emotion/react';
 import { Box, Button, Container, Typography } from '@mui/material';
+import HireMeButton from '../shared/HireMeButton';
 
 const HireMe = () => {
 	const {
@@ -90,18 +91,7 @@ const HireMe = () => {
 							with the necessary regelialia.
 						</Typography>
 
-						<Button
-							sx={{
-								backgroundColor: blue.main,
-								py: 1.8,
-								px: 6,
-								borderRadius: '40px',
-								letterSpacing: 1,
-								m: '0 auto',
-							}}
-						>
-							hire me
-						</Button>
+						<HireMeButton title={'hire me'}></HireMeButton>
 					</Box>
 				</Container>
 			</Box>
