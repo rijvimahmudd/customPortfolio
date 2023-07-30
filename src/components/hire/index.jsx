@@ -14,6 +14,7 @@ const HireMe = () => {
 				alignItems: 'center',
 				// my: 3,
 			}}
+			id="hire-me"
 		>
 			<Box
 				sx={{
@@ -31,6 +32,7 @@ const HireMe = () => {
 					display: 'flex',
 					justifyItems: 'center',
 					alignItems: 'center',
+					scrollMargin: '60px',
 				}}
 			>
 				<Box

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Box, Container, Typography, useMediaQuery } from '@mui/material';
+import { Box, Container, Link, Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@emotion/react';
 import { MenuUnfoldOutlined } from '@ant-design/icons';
 
@@ -10,6 +10,7 @@ const NavBar = ({
 	zIndex,
 	height,
 	top,
+	href,
 	...rest
 }) => {
 	const theme = useTheme();
@@ -83,10 +84,19 @@ const NavBar = ({
 
 					{mq && (
 						<Box display={'flex'} gap={6}>
-							<Typography>Home</Typography>
-							<Typography>Home</Typography>
-							<Typography>Home</Typography>
-							<Typography>Home</Typography>
+							{href.map(el => (
+								<Link
+									key={el.id}
+									sx={{
+										color: theme.palette.fontColor.main,
+										cursor: 'pointer',
+										fontWeight: '500',
+									}}
+									href={el.href}
+								>
+									{el.name}
+								</Link>
+							))}
 						</Box>
 					)}
 				</Box>

@@ -69,9 +69,13 @@ const About = () => {
 				maxHeight: '100vh',
 				'&>*': {
 					flex: `0 0 ${mq ? '48%' : 'auto'}`,
+					scrollSnapAlign: 'start',
 				},
 				alignItems: 'center',
+				scrollSnapType: 'y mandatory',
+				scrollMargin: '60px',
 			}}
+			id="about"
 		>
 			{mq && (
 				<Box
@@ -83,7 +87,7 @@ const About = () => {
 				>
 					<Box
 						component={'img'}
-						src="https://images.unsplash.com/photo-1605728889623-c5f87966b907?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+						src="/rijvi.png"
 						sx={{
 							// height: 1, // for contain the original ratio image
 							height: 'auto',
@@ -91,7 +95,7 @@ const About = () => {
 							objectFit: 'cover',
 							objectPosition: 'center top',
 						}}
-					></Box>
+					/>
 				</Box>
 			)}
 			<Box

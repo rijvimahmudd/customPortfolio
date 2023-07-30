@@ -17,6 +17,29 @@ import Footer from './components/footer';
 import useScrollListener from './components/hooks/useScrollListener';
 import { useEffect, useState } from 'react';
 
+const initLink = [
+	{
+		id: 1,
+		name: 'Home',
+		href: '#home',
+	},
+	{
+		id: 2,
+		name: 'About',
+		href: '#about',
+	},
+	{
+		id: 3,
+		name: 'Projects',
+		href: '#projects',
+	},
+	{
+		id: 4,
+		name: 'Hire Me',
+		href: '#hire-me',
+	},
+];
+
 function App() {
 	const { y } = useScrollListener();
 	const [showNavBar, setShowNavBar] = useState(false);
@@ -31,6 +54,7 @@ function App() {
 			<CssBaseline />
 			<ThemeProvider theme={theme}>
 				<NavBar
+					href={initLink}
 					transparent={!showNavBar && 'transparent'}
 					position={showNavBar ? 'fixed' : 'absolute'}
 					zIndex={showNavBar ? 0 : 3}
@@ -51,7 +75,7 @@ function App() {
 					<Project></Project>
 				</Container>
 				<HireMe></HireMe>
-				<Footer></Footer>
+				<Footer href={initLink}></Footer>
 			</ThemeProvider>
 		</>
 	);

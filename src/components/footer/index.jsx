@@ -7,13 +7,31 @@ import {
 	GitHub,
 	ArrowRightAlt,
 } from '@mui/icons-material';
-import { Box, Container, Typography, styled } from '@mui/material';
+import { Box, Container, Link, Typography, styled } from '@mui/material';
 
 const WhiteTypography = styled(Typography)({
 	color: 'white',
 });
+const WhiteLink = styled(Link)({
+	color: 'white',
+});
 
-const Footer = () => {
+const initSocialIcon = [
+	{
+		id: 1,
+		name: 'github',
+		icon: <GitHub />,
+		link: 'https://github.com/rijvimahmudd',
+	},
+	{
+		id: 2,
+		name: 'linkedin',
+		icon: <LinkedIn />,
+		link: 'https://www.linkedin.com/in/rijvi-mahmud/',
+	},
+];
+
+const Footer = ({ href }) => {
 	const {
 		palette: { secondary, primary },
 	} = useTheme();
@@ -47,8 +65,11 @@ const Footer = () => {
 					},
 				}}
 			>
-				<GitHub />
-				<LinkedIn />
+				{initSocialIcon.map(el => (
+					<Link key={el.id} href={el.link} target={'_blank'}>
+						{el.icon}
+					</Link>
+				))}
 			</Box>
 		</Box>
 	);
@@ -58,24 +79,25 @@ const Footer = () => {
 			<WhiteTypography sx={{ fontSize: '22px', fontWeight: 'medium', mb: 2.5 }}>
 				Links
 			</WhiteTypography>
-			{Array(4)
-				.fill('')
-				.map((_, index) => (
-					<WhiteTypography
-						key={index}
-						sx={{
-							display: 'flex',
-							alignItems: 'center',
-							alignContent: 'center',
-							gap: 2,
-							marginY: 2,
-							color: secondary.secondary,
-						}}
-					>
-						<ArrowRightAlt />
-						Home
-					</WhiteTypography>
-				))}
+			{href.map(el => (
+				<WhiteLink
+					href={el.href}
+					key={el.id}
+					sx={{
+						display: 'flex',
+						alignItems: 'center',
+						alignContent: 'center',
+						gap: 2,
+						marginY: 2,
+						color: secondary.secondary,
+						cursor: 'pointer',
+						scrollPadding: '170px',
+					}}
+				>
+					<ArrowRightAlt />
+					{el.name}
+				</WhiteLink>
+			))}
 		</Box>
 	);
 	const renderServicesSection = () => (

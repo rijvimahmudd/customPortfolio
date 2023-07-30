@@ -9,7 +9,9 @@ const Project = () => {
 		<Box
 			sx={{
 				minHeight: '100vh',
+				scrollMargin: '60px',
 			}}
+			id="projects"
 		>
 			<Typography variant="h4" fontWeight="bold" textAlign="center" p={3}>
 				Projects

@@ -33,6 +33,7 @@ const Hero = () => {
 	const theme = useTheme();
 	return (
 		<Box
+			id="home"
 			sx={{
 				paddingTop: '70px',
 				background: `linear-gradient(90deg, ${theme.palette.neutral.main} 50%, ${theme.palette.primary.main} 50%)`,
